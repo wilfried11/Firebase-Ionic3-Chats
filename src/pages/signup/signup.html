@@ -1,0 +1,77 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Sign Up
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-title>Sign Up</ion-title>
+    <!-- <ion-row>
+            <ion-item>
+                    https://chriztalk.com/ionic-3-and-firebase-authentication/
+                 <div *ngIf="auth.currentUser">current user is {{auth.currentUser}}</div> 
+            </ion-item>
+        </ion-row> -->
+    <form [formGroup]="signupForm" novalidate>
+
+        <ion-row>
+            <ion-item>
+                <ion-label for="email"></ion-label>
+                <ion-input type="email" placeholder="Email" formControlName="email"> </ion-input>
+            </ion-item>
+        </ion-row>
+        <ion-row>
+            <ion-item>
+                <ion-label for="password"></ion-label>
+                <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+            </ion-item>
+        </ion-row>
+
+        <ion-row>
+            <button ion-button (click)="signup()" block> Sing Up </button>
+        </ion-row>
+
+    </form>
+
+
+
+</ion-content>
+<!-- <ion-header>
+
+    <ion-navbar>
+        <ion-title>Signup</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-title>Signup</ion-title>;
+    <form [formGroup]="signupForm" (ngSubmit)="submit()" novalidate>
+        <ion-row>
+            <ion-item>
+                <ion-label for="email"></ion-label>
+                <ion-input type="email" value="" placeholder="Email" formControlName="email"></ion-input>
+            </ion-item>
+        </ion-row>
+
+        <ion-row>
+            <ion-item>
+                <ion-label for="password"></ion-label>
+                <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+            </ion-item>
+        </ion-row>
+        <ion-row>
+            <button ion-button type="submit" block>Sign up</button>
+        </ion-row>
+    </form>
+</ion-content> -->

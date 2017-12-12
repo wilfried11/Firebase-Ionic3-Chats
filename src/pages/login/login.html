@@ -1,0 +1,85 @@
+<ion-content class="background">
+    <h1 class="he"> Login </h1>
+
+    <ion-card>
+        <ion-card-header>
+            <ion-avatar item-start>
+                <img class="img" src="../../assets/imgs/avatar.png">
+            </ion-avatar>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-list no-lines>
+                <form [formGroup]="loginForm" novalidate>
+
+                    <ion-row>
+                        <ion-item>
+                            <ion-label for="email"></ion-label>
+                            <ion-input type="email" placeholder="Email" formControlName="email"> </ion-input>
+                        </ion-item>
+                    </ion-row>
+                    <ion-row>
+                        <ion-item>
+                            <ion-label for="password"></ion-label>
+                            <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+                        </ion-item>
+                    </ion-row>
+
+                    <button ion-button full color="primary" [disabled]="!loginForm.valid" (click)="login()" style="margin-top: 20px;">Log in 
+        	<ion-icon name="log-in"> </ion-icon>
+         </button>
+                    <button (click)='resetPass()' ion-button block>Reset password</button>
+                    <button (click)="signup()" ion-button block>Sing Up</button>
+                    <b> Or </b>
+                    <button (click)="loginWithFacebook()" ion-button block color="prim">
+	      Log in with Facebook 
+	        <ion-icon name="logo-facebook"> </ion-icon>
+	    </button>
+                    <button ion-button block color="danger">
+	      Log in with Google 
+	     <ion-icon name="logo-google" > </ion-icon>
+	    </button>
+                </form>
+            </ion-list>
+
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+<!-- <ion-content padding> -->
+
+<!-- <ion-title>Login</ion-title> -->
+<!-- <ion-row>
+        <ion-item>
+                https://chriztalk.com/ionic-3-and-firebase-authentication/
+             <div *ngIf="auth.currentUser">current user is {{auth.currentUser}}</div> 
+        </ion-item>
+    </ion-row> -->
+
+<!-- <form [formGroup]="loginForm" novalidate>
+        <ion-row>
+            <ion-item>
+                <ion-label for="email"></ion-label>
+                <ion-input type="email" placeholder="Email" formControlName="email"> </ion-input>
+            </ion-item>
+        </ion-row>
+        <ion-row>
+            <ion-item>
+                <ion-label for="password"></ion-label>
+                <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+            </ion-item>
+        </ion-row>
+
+        <ion-row>
+            <button (click)="login()" ion-button block>Log In</button> Or
+            <button (click)='resetPass()' ion-button block>Reset password</button>
+            <button (click)="signup()" ion-button block>Sing Up</button>
+        </ion-row>
+    </form> -->
+<!-- <ion-row>
+        <button [navPush]="signupPage" ion-button block>Sign up</button>
+    </ion-row>
+    <ion-row>
+         <button (click)="logout()" ion-button bloc> Log out</button> 
+    </ion-row> -->
+
+
+<!-- </ion-content> -->
